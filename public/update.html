@@ -1,0 +1,101 @@
+<!-- public/update.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>actualizar</title>
+
+   <!-- font awesome  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- CSS  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <link rel="stylesheet" href="./css/style2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/categorias.css">
+   <link rel="stylesheet" href="./css/cursos.css">
+   <link rel="stylesheet" href="./css/leccion.css">
+   <link rel="stylesheet" href="./css/teachers.css">
+   <link rel="stylesheet" href="./css/usuarios.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="logueado.html" class="logo"><span>Dimiz</span> Academy</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="buscar cursos..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""> <span>Ingresar</span></a></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <!-- Perfil dinámico -->
+      <div class="profile">
+         <!-- Aquí se insertará dinámicamente el perfil según el estado de inicio de sesión -->
+      </div>
+
+   </section>
+
+</header>   
+
+
+<section class="form-container">
+   <form id="updateForm" enctype="multipart/form-data">
+      <h3>Actualizar Perfil</h3>
+      <p>Actualizar nombre</p>
+      <input type="text" name="name" placeholder="Nombre" maxlength="50" class="box">
+      <p>Actualizar email</p>
+      <input type="email" name="email" placeholder="Correo electrónico" maxlength="50" class="box">
+      <p>Contraseña anterior</p>
+      <input type="password" name="old_pass" placeholder="Contraseña anterior" maxlength="20" class="box">
+      <p>Nueva contraseña</p>
+      <input type="password" name="new_pass" placeholder="Nueva contraseña" maxlength="20" class="box">
+      <p>Confirmar contraseña</p>
+      <input type="password" name="c_pass" placeholder="Confirmar nueva contraseña" maxlength="20" class="box">
+      <input type="submit" value="Actualizar Perfil" name="submit" class="btn">
+   </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Desert Dimz</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+
+<script src="./js/auth.js"></script>
+<script src="js/script.js"></script>
+<script src="./js/update.js"></script>
+
+   
+</body>
+</html>
