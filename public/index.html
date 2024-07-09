@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Usuarios y Cursos</title>
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+  <h1>Lista de Usuarios</h1>
+  <div class="table-wrapper">
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody id="user-list"></tbody>
+    </table>
+  </div>
+
+  <h1>Lista de Cursos</h1>
+  <div class="table-wrapper">
+    <table id="curso-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th colspan="2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="curso-list"></tbody>
+    </table>
+  </div>
+
+  <script src="./js/listaUsers.js"></script>
+</body>
+</html>

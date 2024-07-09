@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Actualizar Lecciones</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <section class="flex">
+            <a href="dashboard.html" class="logo">Dimiz Academy</a>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+            <div class="profile">
+                <img src="../uploaded_files/sample_image.jpg" alt="">
+                <h3>User Name</h3>
+                <span>User Profession</span>
+                <a href="profile.php" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="login.php" class="option-btn">login</a>
+                    <a href="register.php" class="option-btn">register</a>
+                </div>
+                <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+            </div>
+        </section>
+    </header>
+    
+    <div class="side-bar">
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="profile">
+            <h3>Panel <br>Administrativo</h3>
+        </div>
+        <nav class="navbar">
+            <a href="playlists.html"><i class=""></i><span>Cursos</span></a>
+            <a href="add_playlist.html"><i class="fas"></i><span>Crear Cursos</span></a>
+            <a href="add_content.html"><i class="fas"></i><span>Añadir Contenidos</span></a>
+            <a href="../login.html" onclick="return confirm('Cerrar sesión en esta pagina?');"><i class="fas"></i><span>Cerrar Sesión</span></a>
+        </nav>
+    </div>
+   
+<section class="video-form">
+    <h1 class="heading">Actualizar Lección</h1>
+ 
+    <form id="updateForm">
+       <p>Título de la lección <span>*</span></p>
+       <input type="text" id="title" name="title" maxlength="100" required placeholder="Ingrese título de la lección" class="box">
+       <p>Descripción de la lección <span>*</span></p>
+       <textarea id="description" name="description" class="box" required placeholder="Escriba la descripción de la lección" maxlength="1000" cols="30" rows="10"></textarea>
+       <p>URL del video <span>*</span></p>
+       <input type="text" id="video" name="video" required placeholder="Ingrese URL del video" class="box">
+       <input type="submit" value="Actualizar" class="btn">
+    </form>
+ </section>
+
+ <script src="./updateContent.js"></script>
+
+</body>
+</html>

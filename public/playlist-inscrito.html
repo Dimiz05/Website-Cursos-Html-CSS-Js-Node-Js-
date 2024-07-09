@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>video playlist</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="logueado.html" class="logo"><span>Dimiz </span>Academy</a>
+
+      <div class="icons">
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""> <span>Usuario</span></a></div>
+         <div id="toggle-btn" class="fa-solid fa-bars"></div>
+      </div>
+
+      <div class="navbar-menu">
+         <ul>
+           <li><a href="./courses.html">Cursos</a></li>
+           <li><a href="./teachers.html">Instructores</a></li>
+           <li><a href="#">Perfil</a></li>
+         </ul>
+       </div>
+
+       <div class="profile">
+         <img src="images/avatar.png" class="image" alt="">
+         <h3 class="name">Jeison Galbis</h3>
+         <p class="role">Estudiante</p>
+         <a href="profile.html" class="btn">Perfil</a>
+         <div class="flex-btn">
+            <a href="home.html" class="option-btn">Cerrar Sesión</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+
+
+<section class="playlist-details">
+
+   <h1 class="heading">Detalles Del Curso</h1>
+
+   <div class="row">
+
+      <div class="column">
+         <form action="" method="post" class="save-playlist">
+            <button type="submit"><i class="far fa-solid fa-bookmark"></i> <a href="">Inscrito</a></button>
+         </form>
+   
+         <div class="thumb">
+            <img src="images/java.png" alt="">
+         </div>
+      </div>
+      <div class="column">
+         <div class="tutor">
+            <img src="images/avatar.png" alt="">
+            <div>
+               <h3>Desert Dimiz</h3>
+            </div>
+         </div>
+   
+         <div class="details">
+            <h3>Master Completo en Java</h3>
+            <p>
+               Este curso está diseñado para introducir a los estudiantes en el lenguaje de programación Java, uno de 
+               los más utilizados en el desarrollo de software a nivel mundial. A lo largo del curso, los 
+               participantes explorarán los fundamentos de la programación orientada a objetos, así como las 
+               características distintivas de Java que lo hacen adecuado para una amplia gama de aplicaciones.
+            </p>
+            <a href="teacher_profile.html" class="inline-btn">Mirar Perfil</a>
+         </div>
+      </div>
+   </div>
+
+</section>
+
+<section class="playlist-videos">
+
+   <h1 class="heading">Contenido</h1>
+
+   <div class="box-container">
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 01)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 02)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 03)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 04)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 05)</h3>
+      </a>
+
+      <a class="box" href="watch-video.html">
+         <i class="fas fa-play"></i>
+         <img src="images/portada.png" alt="">
+         <h3>Master Completo en Java (part 06)</h3>
+      </a>
+
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Dimiz Academy</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+<script>
+   // JavaScript para el menú desplegable
+   document.getElementById('toggle-btn').addEventListener('click', function() {
+      document.querySelector('.navbar-menu').classList.toggle('active');
+   });
+</script>
+   
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Lección</title>
+</head>
+<body>
+  <h1>Crear Lección</h1>
+  <form id="leccionForm" enctype="multipart/form-data">
+    <label for="tutor">Seleccionar Tutor:</label>
+    <select id="tutor" name="tutor_id" required>
+      <!-- Opciones de tutores serán agregadas aquí -->
+    </select>
+    <br><br>
+    <label for="curso">Seleccionar Curso:</label>
+    <select id="curso" name="curso_id" required>
+      <!-- Opciones de cursos serán agregadas aquí -->
+    </select>
+    <br><br>
+    <label for="title">Título:</label>
+    <input type="text" id="title" name="title" required>
+    <br><br>
+    <label for="description">Descripción:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br><br>
+    <label for="video">Video URL:</label>
+    <input type="text" id="video" name="video" required>
+    <br><br>
+    <label for="thumb">Imagen:</label>
+    <input type="file" id="thumb" name="thumb" accept="image/*" required>
+    <br><br>
+    <button type="submit">Crear Lección</button>
+  </form>
+
+  <script>
+    // Función para obtener y mostrar los tutores
+    function fetchTutors() {
+      fetch('http://localhost:3000/tutors')
+        .then(response => response.json())
+        .then(tutors => {
+          const tutorSelect = document.getElementById('tutor');
+          tutors.forEach(tutor => {
+            const option = document.createElement('option');
+            option.value = tutor.id;
+            option.textContent = tutor.name;
+            tutorSelect.appendChild(option);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching tutors:', error);
+        });
+    }
+
+    // Función para obtener y mostrar los cursos
+    function fetchCursos() {
+      fetch('http://localhost:3000/cursos')
+        .then(response => response.json())
+        .then(cursos => {
+          const cursoSelect = document.getElementById('curso');
+          cursos.forEach(curso => {
+            const option = document.createElement('option');
+            option.value = curso.id;
+            option.textContent = curso.title;
+            cursoSelect.appendChild(option);
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching cursos:', error);
+        });
+    }
+
+    // Función para manejar la creación de una lección
+    function handleCreateLeccion(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('leccionForm');
+      const formData = new FormData(form);
+
+      fetch('http://localhost:3000/lecciones', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(result => {
+        if (result.error) {
+          alert('Error creando la lección: ' + result.error);
+        } else {
+          alert('Lección creada exitosamente');
+        }
+      })
+      .catch(error => {
+        console.error('Error creating leccion:', error);
+      });
+    }
+
+    // Llamar a las funciones para obtener los tutores y cursos cuando se carga la página
+    window.onload = () => {
+      fetchTutors();
+      fetchCursos();
+      document.getElementById('leccionForm').addEventListener('submit', handleCreateLeccion);
+    };
+  </script>
+</body>
+</html>

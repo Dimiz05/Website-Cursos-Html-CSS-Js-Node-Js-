@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Playlist Details</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="dashboard.html" class="logo">Dimiz Academy</a>
+
+            
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <!-- User profile information will go here -->
+                <img src="../uploaded_files/sample_image.jpg" alt="">
+                <h3>User Name</h3>
+                <span>User Profession</span>
+                <a href="profile.php" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="login.php" class="option-btn">login</a>
+                    <a href="register.php" class="option-btn">register</a>
+                </div>
+                <a href="../login.html" onclick="return confirm('logout from this website?');"
+                    class="delete-btn">logout</a>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <!-- User profile information will go here -->
+            
+            <h3>Panel <br>Administrativo</h3>
+            
+        </div>
+
+        <nav class="navbar">
+            <a href="playlists.html"><i class=""></i><span>Cursos</span></a>
+            <a href="add_playlist.html"><i class="fas"></i><span>Crear Cursos</span></a>
+            <a href="add_content.html"><i class="fas"></i><span>Añadir Contenidos</span></a>
+            <a href="../components/admin_logout.php" onclick="return confirm('Cerrar sesión en esta pagina?');"><i
+                    class="fas"></i><span>Cerrar Sesión</span></a>
+        </nav>
+
+    </div>
+   
+<section class="playlist-details">
+
+   <h1 class="heading">Detalles Del Curso</h1>
+
+   <div class="row">
+      <div class="thumb">
+         <img src="./curso1.jpg" alt="">
+      </div>
+      <div class="details">
+         <h3 class="title">Java de Cero a Experto</h3>
+         <div class="description">
+            <p>lsfffffffffffffffff</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="contents">
+
+   <h1 class="heading">Contenidos Del Curso</h1>
+
+   <div class="box-container">
+   
+      <div class="box">
+         <img src="./content1.jpg" class="thumb" alt="">
+         <h3 class="title"><!-- Video title here --></h3>
+         <form action="" method="post" class="flex-btn">
+            <input type="hidden" name="video_id" value="!-- Video ID here ">
+            <a href="update_content.html" class="option-btn">Actualizar</a>
+            <input type="submit" value="Eliminar" class="delete-btn" onclick="return confirm('delete this video?');" name="delete_video">
+         </form>
+      </div>
+   </div>
+
+</section>
+
+<?php include '../components/footer.php'; ?>
+
+<script src="admin_script.js"></script>
+
+</body>
+</html>

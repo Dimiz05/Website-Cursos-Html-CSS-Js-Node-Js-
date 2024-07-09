@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="dashboard.html" class="logo">Dimiz Academy</a>
+
+            
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <!-- User profile information will go here -->
+                <img src="../uploaded_files/sample_image.jpg" alt="">
+                <h3>User Name</h3>
+                <span>User Profession</span>
+                <a href="profile.php" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="login.php" class="option-btn">login</a>
+                    <a href="register.php" class="option-btn">register</a>
+                </div>
+                <a href="../login.html" onclick="return confirm('logout from this website?');"
+                    class="delete-btn">logout</a>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <!-- User profile information will go here -->
+            
+            <h3>Panel <br>Administrativo</h3>
+            
+        </div>
+
+        <nav class="navbar">
+            <a href="playlists.html"><i class=""></i><span>Cursos</span></a>
+            <a href="add_playlist.html"><i class="fas"></i><span>Crear Cursos</span></a>
+            <a href="add_content.html"><i class="fas"></i><span>Añadir Contenidos</span></a>
+            <a href="../components/admin_logout.php" onclick="return confirm('Cerrar sesión en esta pagina?');"><i
+                    class="fas"></i><span>Cerrar Sesión</span></a>
+        </nav>
+
+    </div>
+
+    <section class="playlists">
+
+        <h1 class="heading">Mis Cursos</h1>
+
+        <div class="box-container">
+
+            
+
+            <!-- Example Playlist Box -->
+            <div class="box">
+                <div class="thumb">
+                    <a href="view_playlist.html">
+                    <img src="./curso1.jpg" alt="">
+                    </a>
+                </div>
+                <h3 class="title">Curso 1</h3>
+                <form action="" method="post" class="flex-btn">
+                    <input type="hidden" name="playlist_id" value="1">
+                    <a href="update_playlist.html" class="option-btn">Actualizar</a>
+                    <input type="submit" value="Eliminar" class="delete-btn"
+                        onclick="return confirm('Eliminar este curso?');" name="delete">
+                </form>
+            </div>
+            <div class="box">
+                <div class="thumb">
+                    <a href="view_playlist.html">
+                    <img src="./curso2.jpg" alt="">
+                    </a>
+                </div>
+                <h3 class="title">Curso 2</h3>
+                <form action="" method="post" class="flex-btn">
+                    <input type="hidden" name="playlist_id" value="1">
+                    <a href="update_playlist.html" class="option-btn">Actualizar</a>
+                    <input type="submit" value="Eliminar" class="delete-btn"
+                        onclick="return confirm('Eliminar este curso?');" name="delete">
+                </form>
+            </div>
+            <div class="box">
+                <div class="thumb">
+                    <a href="view_playlist.html">
+                    <img src="./curso3.jpg" alt="">
+                    </a>
+                </div>
+                <h3 class="title">Curso 3</h3>
+                <form action="" method="post" class="flex-btn">
+                    <input type="hidden" name="playlist_id" value="1">
+                    <a href="update_playlist.html" class="option-btn">Actualizar</a>
+                    <input type="submit" value="Eliminar" class="delete-btn"
+                        onclick="return confirm('Eliminar este curso?');" name="delete">
+                </form>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <script src="./admin_script.js"></script>
+
+    <script>
+        document.querySelectorAll('.playlists .box-container .box .description').forEach(content => {
+            if (content.innerHTML.length > 100) content.innerHTML = content.innerHTML.slice(0, 100);
+        });
+    </script>
+
+</body>
+
+</html>

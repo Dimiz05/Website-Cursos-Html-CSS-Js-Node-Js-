@@ -1,0 +1,151 @@
+<!-- admin/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="dashboard.html" class="logo">Dimiz Academy</a>
+
+            <h3>Usuario: Administrador 3</h3>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <!-- User profile information will go here -->
+                <img src="../uploaded_files/sample_image.jpg" alt="">
+                <h3>User Name</h3>
+                <span>User Profession</span>
+                <a href="profile.php" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="login.php" class="option-btn">login</a>
+                    <a href="register.php" class="option-btn">register</a>
+                </div>
+                <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');"
+                    class="delete-btn">logout</a>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div class="close-side-bar">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <!-- User profile information will go here -->
+
+            <h3>Panel <br>Administrativo</h3>
+
+        </div>
+
+        <nav class="navbar">
+            <a href="./crearTutor.html"><i class=""></i><span>Añadir Tutores</span></a>
+            <a href="add_playlist.html"><i class="fas"></i><span>Crear Cursos</span></a>
+            <a href="add_content.html"><i class="fas"></i><span>Añadir Contenidos</span></a>
+            <a href="../login.html" onclick="return confirm('Cerrar sesión en esta pagina?');"><i
+                    class="fas"></i><span>Cerrar Sesión</span></a>
+        </nav>
+
+    </div>
+
+    <section class="dashboard">
+        <h1>Lista de Tutores</h1>
+        <div class="table-wrapper">
+            <table id="user-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody id="user-list"></tbody>
+            </table>
+        </div>
+
+        <h1>Lista de Categorias</h1>
+        <div class="table-wrapper">
+            <table id="categoria-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="categorias-list"></tbody>
+            </table>
+        </div>
+
+        <!-- Botón para crear una nueva categoría -->
+        <button id="newCategoriaBtn" >Crear Nueva Categoría</button>
+
+        <h1>Lista de Cursos</h1>
+        <div class="table-wrapper">
+            <table id="curso-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Categoria</th>
+                        <th colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="curso-list"></tbody>
+            </table>
+        </div>
+
+        <h1>Lista de Lecciones</h1>
+        <div class="table-wrapper">
+            <table id="leccion-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Tutor</th>
+                        <th>Curso</th>
+                        <th colspan="2">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="leccion-list"></tbody>
+            </table>
+        </div>
+
+        
+
+    </section>
+
+    <script src="./admin_script.js"></script>
+    <script src="../js/listaUsers.js"></script>
+
+</body>
+
+</html>

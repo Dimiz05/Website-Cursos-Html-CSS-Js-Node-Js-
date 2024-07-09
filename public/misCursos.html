@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mis Cursos</title>
+
+   <!-- font awesome  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- CSS  -->
+   <link rel="stylesheet" href="./css/style.css">
+
+   <link rel="stylesheet" href="./css/style2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/categorias.css">
+   <link rel="stylesheet" href="./css/cursos.css">
+   <link rel="stylesheet" href="./css/leccion.css">
+   <link rel="stylesheet" href="./css/teachers.css">
+   <link rel="stylesheet" href="./css/usuarios.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo"><span>Dimiz</span> Academy</a>
+
+      <div class="icons">
+         <!-- Los íconos individuales -->
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""><span>Ingresar</span></a></div>
+         <!-- Botón de hamburguesa -->
+         <div id="toggle-btn" class="fa-solid fa-bars"></div>
+      </div>
+
+      <!-- Menú desplegable -->
+      <div class="navbar-menu">
+         <ul>
+           <li><a href="./courses.html">Cursos</a></li>
+           <li><a href="./teachers.html">Instructores</a></li>
+           <li><a href="#">Ingresar</a></li>
+         </ul>
+       </div>
+
+      <!-- Perfil dinámico -->
+      <div class="profile">
+         <!-- Aquí se insertará dinámicamente el perfil según el estado de inicio de sesión -->
+      </div>
+
+   </section>
+
+</header>   
+
+
+
+<section class="courses">
+
+   <h1 class="heading">Mis Cursos</h1>
+
+   <div class="box-container" id="coursesContainer">
+
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Desert Dimiz</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="./js/misCursos.js"></script>
+<script src="./js/auth.js" type="module"></script>
+
+   
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>register</title>
+
+   <!-- font awesome  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- CSS  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <link rel="stylesheet" href="./css/style2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/categorias.css">
+   <link rel="stylesheet" href="./css/cursos.css">
+   <link rel="stylesheet" href="./css/leccion.css">
+   <link rel="stylesheet" href="./css/teachers.css">
+   <link rel="stylesheet" href="./css/usuarios.css">
+</head>
+<body>
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo"><span>Dimiz</span> Academy</a>
+      
+      <div class="icons">
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""><span>Ingresar</span></a></div>
+         <div id="toggle-btn" class="fa-solid fa-bars"></div>
+      </div>
+      <div class="navbar-menu">
+         <ul>
+           <li><a href="./courses.html">Cursos</a></li>
+           <li><a href="./teachers.html">Instructores</a></li>
+           <li><a href="#">Ingresar</a></li>
+         </ul>
+       </div>
+      <div class="profile">
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Iniciar Sesión</a>
+            <a href="register.html" class="option-btn">Crear Cuenta</a>
+         </div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">shaikh anas</h3>
+         <p class="role">studen</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+            <a href="register.html" class="option-btn">register</a>
+         </div>
+      </div>
+   </section>
+</header>   
+<section class="form-container">
+   <form id="registerForm" action="" method="post" enctype="multipart/form-data" novalidate>
+      <h3>Registrarse</h3>
+      <p>Nombre <span>*</span></p>
+      <input type="text" id="name" name="name" placeholder="ingresa tu nombre" required maxlength="50" class="box">
+      <span id="nameError" class="error-message"></span>
+      <p>Email <span>*</span></p>
+      <input type="email" id="email" name="email" placeholder="ingresa tu email" required maxlength="50" class="box">
+      <span id="emailError" class="error-message"></span>
+      <p>Contraseña <span>*</span></p>
+      <input type="password" id="pass" name="pass" placeholder="ingresa tu contraseña" required maxlength="20" class="box">
+      <span id="passError" class="error-message"></span>
+      <p>Confirma tu contraseña <span>*</span></p>
+      <input type="password" id="c_pass" name="c_pass" placeholder="confirma tu contraseña" required maxlength="20" class="box">
+      <span id="cPassError" class="error-message"></span>
+      <input type="submit" value="Registrarse" name="submit" class="btn">
+      <p>Ya tienes una cuenta? <a href="./login.html">Inicia Sesión</a></p>
+   </form>
+</section>
+
+
+
+
+<footer class="footer">
+   &copy; copyright @ 2024 by <span>Desert Dimz</span> | all rights reserved!
+</footer>
+
+
+
+<!-- custom js file link  -->
+<script src="./js/script.js"></script>
+<script src="./js/register.js"></script>
+
+
+</body>
+</html>

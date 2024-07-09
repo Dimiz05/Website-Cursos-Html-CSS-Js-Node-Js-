@@ -1,0 +1,165 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f9f9f9;
+}
+
+.dashboard h1{
+  font-size: 24px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las tablas */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  margin: 0 auto 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: rgb(34, 34, 59);
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+}
+
+tr {
+  font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button.edit {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #2e6330;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #a73735;
+}
+
+/* Diseño responsivo */
+@media screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+  }
+
+  thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+  }
+
+  td {
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+  }
+
+  td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+  }
+
+  .actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .actions button {
+      width: 100%;
+      margin: 5px 0;
+  }
+}
+
+
+#newCategoriaBtn {
+  background-color: rgb(34, 34, 59);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Estilo para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  #newCategoriaBtn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Estilo para pantallas muy pequeñas, como dispositivos móviles */
+@media screen and (max-width: 480px) {
+  #newCategoriaBtn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+#newCategoriaBtn:hover {
+  background-color: rgb(60, 60, 100);
+}
+

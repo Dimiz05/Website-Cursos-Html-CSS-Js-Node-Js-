@@ -1,0 +1,150 @@
+<!-- public/logueado.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>home</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="logueado.html" class="logo"><span>Dimiz</span> Academy</a>
+
+      <div class="icons">
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""> <span>Usuario</span></a></div>
+         <div id="toggle-btn" class="fa-solid fa-bars"></div>
+      </div>
+
+      <div class="navbar-menu">
+         <ul>
+           <li><a href="./courses.html">Cursos</a></li>
+           <li><a href="./teachers.html">Instructores</a></li>
+           <li><a href="#">Perfil</a></li>
+         </ul>
+       </div>
+
+       <div class="profile">
+         <img src="images/avatar.png" class="image" alt="">
+         <h3 class="name" id="userName"></h3> <!-- Aquí se mostrará el nombre del usuario -->
+         <p class="role">Estudiante</p>
+         <a href="profile.html" class="btn">Perfil</a>
+         <div class="flex-btn">
+           <a href="home.html" class="option-btn">Cerrar Sesión</a>
+         </div>
+       </div>
+
+   </section>
+
+</header>
+
+<section class="banner">
+   <div class="content-banner">
+      <h2>IMPULSA<br />TU FUTURO DIGITAL</h2>
+   </div>
+</section>
+
+
+<section class="categorias">
+
+   <h1 class="heading">Nuestras <span>Categorias</span></h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="thumb">
+            <img src="./images/DevWeb.jpg" alt="">
+         </div>
+         <h3 class="title">Desarrollo Web</h3>
+         <a href="playlist-log.html" class="inline-btn">Explorar Categoria</a>
+      </div>
+
+      <div class="box">
+         <div class="thumb">
+            <img src="./images/DevMovil.jpg" alt="">
+         </div>
+         <h3 class="title">Desarrollo Movil</h3>
+         <a href="playlist-log.html" class="inline-btn">Explorar Categoria</a>
+      </div>
+
+      <div class="box">
+         <div class="thumb">
+            <img src="./images/DevLenguaje.jpg" alt="">
+         </div>
+         <h3 class="title">Lenguajes de Programación</h3>
+         <a href="playlist-log.html" class="inline-btn">Explorar Categoria</a>
+      </div>
+
+   </div>
+
+</section>
+
+
+<section class="courses">
+
+   <h1 class="heading">Nuestros <span>Cursos</span></h1>
+
+   <div class="box-container" id="coursesContainer">
+
+   </div>
+
+   <div class="more-btn">
+      <a href="courses.html" class="inline-option-btn">Todos Los Cursos</a>
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2024 by <span>Desert Dimiz</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="./js/listaCursos.js"></script>
+
+<script>
+   // Obtener el nombre del usuario de la respuesta JSON
+  const userName = localStorage.getItem('userName'); // Suponiendo que has almacenado el nombre en localStorage
+
+// Mostrar el nombre del usuario en el perfil
+document.getElementById('userName').textContent = userName;
+
+   // JavaScript para el menú desplegable
+   document.getElementById('toggle-btn').addEventListener('click', function() {
+      document.querySelector('.navbar-menu').classList.toggle('active');
+   });
+</script>
+   
+</body>
+</html>

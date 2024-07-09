@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>video playlist</title>
+
+   <!-- font awesome  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- CSS  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <link rel="stylesheet" href="./css/style2.css">
+   <link rel="stylesheet" href="./css/header.css">
+   <link rel="stylesheet" href="./css/categorias.css">
+   <link rel="stylesheet" href="./css/cursos.css">
+   <link rel="stylesheet" href="./css/leccion.css">
+   <link rel="stylesheet" href="./css/teachers.css">
+   <link rel="stylesheet" href="./css/usuarios.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo"><span>Dimiz </span>Academy</a>
+
+      <div class="icons">
+         <div class="fas"><a href="./courses.html"><span>Cursos</span></a></div>
+         <div class="fas"><a href="./teachers.html"><span>Instructores</span></a></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas"><a href=""> <span>Ingresar</span></a></div>
+         <div id="toggle-btn" class="fa-solid fa-bars"></div>
+      </div>
+
+      <!-- Menú desplegable -->
+      <div class="navbar-menu">
+        <ul>
+           <li><a href="./courses.html">Cursos</a></li>
+           <li><a href="./teachers.html">Instructores</a></li>
+           <li><a href="./login.html">Ingresar</a></li>
+        </ul>
+     </div>
+
+      <!-- Perfil dinámico -->
+      <div class="profile">
+        <!-- Aquí se insertará dinámicamente el perfil según el estado de inicio de sesión -->
+     </div>
+
+   </section>
+
+</header>   
+
+
+<section class="playlist-details">
+   <h1 class="heading">Detalles Del Curso</h1>
+   <div class="row">
+      <div class="column">
+         <form id="inscripcionForm" class="save-playlist">
+            <button type="submit"><i class="far fa-bookmark"></i> <span>Registrarse</span></button>
+         </form>
+         <div class="thumb">
+            <img id="cursoThumb" src="" alt="">
+         </div>
+      </div>
+      <div class="column">
+         <div class="tutor">
+            <img src="images/tutor.png" alt="">
+            <div>
+               <h3 id="tutorName"></h3>
+            </div>
+         </div>
+         <div class="details">
+            <h3 id="cursoTitle"></h3>
+            <p id="cursoDescription"></p>
+            <a id="tutorProfileLink" href="teacher_profile.html" class="inline-btn">Mirar Perfil</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="playlist-videos">
+   <h1 class="heading">Lecciones</h1>
+   <div class="box-container" id="lessonsContainer">
+      <!-- Lecciones se agregarán aquí -->
+   </div>
+</section>
+
+<footer class="footer">
+   &copy; copyright @ 2024 by <span>Dimiz Academy</span> | all rights reserved!
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/ins.js"></script>
+<script src="./js/playlist-curso.js"></script>
+
+
+</body>
+</html>
